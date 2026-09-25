@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<!-- DOCTYPE — объявление HTML5, а не тег. -->
+<!-- Учебный пример: только HTML, без CSS и JavaScript.
+     Основные и дополнительные современные теги, но не весь стандарт HTML.
+     Расписание, направления, события и контакты ниже — учебные примеры.
+     Комментарии видны в редакторе и исходном коде, но не на странице.
+     Откройте файл в браузере, а затем в VS Code для разбора. -->
+<html lang="ru">
+<head>
+  <!-- head содержит сведения о документе. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Учебная HTML-страница на тему Ala-Too для разбора тегов на занятии.">
+  <title>Ala-Too — изучаем HTML</title>
+  <!-- link подключает внешний ресурс. Здесь он не используется:
+  <link rel="stylesheet" href="style.css">
+  style задаёт CSS, script подключает JavaScript — в этом примере их нет.
+  base меняет базовый URL относительных ссылок; здесь не требуется. -->
+</head>
+<body>
+  <!-- Якорная ссылка переносит к элементу с соответствующим id. -->
+  <a href="#main">Перейти к основному содержимому</a>
+
+  <!-- header — вводная часть страницы или раздела. -->
+  <header id="top">
+    <h1>Ala-Too International University</h1>
+    <p>Учебный сайт для занятия по <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+    <p><strong>Это демонстрационный макет, а не официальный сайт университета.</strong></p>
+    <!-- nav — блок основных навигационных ссылок. -->
+    <nav aria-label="Главное меню">
+      <ul>
+        <li><a href="#about">Об университете</a></li>
+        <li><a href="#directions">Направления</a></li>
+        <li><a href="#schedule">Расписание</a></li>
+        <li><a href="#media">Изображения и медиа</a></li>
+        <li><a href="#application">Анкета</a></li>
+        <li><a href="#laboratory">Лаборатория тегов</a></li>
+        <li><a href="#practice">Практика</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- main — главное уникальное содержимое страницы. -->
+  <main id="main">
+    <!-- section объединяет тематический раздел, обычно с заголовком. -->
+    <section id="about">
+      <h2>Об университете</h2>
+      <p>Добро пожаловать на учебную страницу <b>Ala-Too</b>!
+        Здесь мы учимся создавать структуру сайта университета.</p>
+      <p>На занятии мы разберём <em>назначение каждого элемента</em>,
+        а затем создадим собственную страницу.</p>
+      <!-- strong — важность; em — смысловое ударение.
+           b — привлечение внимания без дополнительной важности;
+           i — термин, иной голос или иноязычное выражение. -->
+      <p>Наш принцип: <i lang="en">learning by doing</i> — обучение через практику.</p>
+      <p><mark>Сегодня работаем только с HTML.</mark>
+        <small>Оформление с помощью CSS можно добавить на следующем занятии.</small></p>
+      <p>Сайт университета:
+        <a href="https://alatoo.edu.kg/" target="_blank" rel="noopener noreferrer">открыть Ala-Too в новой вкладке</a>.
+      </p>
+      <!-- blockquote — отдельная цитата; q — короткая цитата в тексте. -->
+      <blockquote>
+        <p>Создай страницу, которую сможет понять другой человек.</p>
+      </blockquote>
+      <p>Выше — учебная фраза автора макета. Короткая цитата: <q>Начни со структуры.</q></p>
+      <!-- hr — тематический переход, а не инструмент создания отступов. -->
+      <hr>
+      <aside>
+        <h3>Для обсуждения</h3>
+        <p>HTML описывает структуру и смысл содержимого. CSS отвечает за оформление,
+          JavaScript — за программное поведение.</p>
+      </aside>
+    </section>
+
+    <section id="directions">
+      <h2>Учебные направления</h2>
+      <p>Ниже — условные примеры для демонстрации списков и карточек.</p>
+      <!-- article — самостоятельный материал, например карточка или новость. -->
+      <article>
+        <h3>Информационные технологии</h3>
+        <p>Пример описания направления для будущих разработчиков.</p>
+        <h4>Веб-разработка</h4>
+        <p>Создание веб-страниц и приложений.</p>
+        <h5>Модуль HTML</h5>
+        <p>Структура документа и семантическая разметка.</p>
+        <h6>Тема: ссылки</h6>
+        <p>Относительные, абсолютные и якорные ссылки.</p>
+        <!-- Уровень h1–h6 выбирают по вложенности, не по размеру шрифта. -->
+      </article>
+      <article>
+        <h3>Экономика и финансы</h3>
+        <p>Пример описания направления для будущих аналитиков.</p>
+        <!-- ul — неупорядоченный список; li — его пункт. -->
+        <ul>
+          <li>Бухгалтерский учёт</li>
+          <li>Анализ данных
+            <ul>
+              <li>Электронные таблицы</li>
+              <li>Визуализация показателей</li>
+            </ul>
+          </li>
+          <li>Финансовое планирование</li>
+        </ul>
+      </article>
+      <h3>Как выполнить учебное задание</h3>
+      <!-- ol — упорядоченный список. -->
+      <ol>
+        <li>Создайте папку проекта.</li>
+        <li>Создайте файл <code>index.html</code>.</li>
+        <li>Добавьте разметку.</li>
+        <li>Откройте файл в браузере.</li>
+      </ol>
+      <h3>Словарь</h3>
+      <!-- dl — список описаний; dt — термин; dd — описание. -->
+      <dl>
+        <dt><dfn>Тег</dfn></dt>
+        <dd>Часть синтаксиса HTML, например <code>&lt;p&gt;</code>.</dd>
+        <dt>Элемент</dt>
+        <dd>Например, абзац целиком: <code>&lt;p&gt;Привет!&lt;/p&gt;</code>.</dd>
+        <dt>Атрибут</dt>
+        <dd>Дополнительная настройка элемента, например <code>href</code> у ссылки.</dd>
+      </dl>
+    </section>
+
+    <section id="schedule">
+      <h2>Расписание учебной группы</h2>
+      <p>Условные данные для разбора таблиц. Таблицы предназначены для данных, не для вёрстки страницы.</p>
+      <!-- table — таблица; caption — её название; tr — строка;
+           th — заголовочная ячейка; td — ячейка с данными.
+           Без CSS браузер может не рисовать границы. Это нормально. -->
+      <table>
+        <caption>Пример расписания занятий</caption>
+        <thead>
+          <tr>
+            <th scope="col">День</th>
+            <th scope="col">Время</th>
+            <th scope="col">Предмет</th>
+            <th scope="col">Аудитория</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="rowgroup" rowspan="2">Понедельник</th>
+            <td>09:00–09:40</td>
+            <td>Web Programming</td>
+            <td>001</td>
+          </tr>
+          <tr>
+            <td>09:50–10:30</td>
+            <td>Практика HTML</td>
+            <td>001</td>
+          </tr>
+          <tr>
+            <th scope="row">Среда</th>
+            <td>10:40–11:20</td>
+            <td>Анализ данных</td>
+            <td>002</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="3">Всего занятий</th>
+            <td>3</td>
+          </tr>
+        </tfoot>
+      </table>
+      <!-- rowspan объединяет строки, colspan — столбцы. -->
+    </section>
+
+    <section id="media">
+      <h2>Изображения и медиа</h2>
+      <!-- figure — самостоятельная иллюстрация; figcaption — её подпись.
+           Для автономности img содержит небольшую встроенную иллюстрацию.
+           На занятии замените src на путь к собственному фото: images/campus.jpg.
+           alt описывает смысл изображения; width и height задают размеры. -->
+      <figure>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='180' viewBox='0 0 480 180'%3E%3Crect width='480' height='180' fill='%23eef3f8'/%3E%3Cpath d='M100 70L240 15L380 70Z' fill='%23324c70'/%3E%3Cpath d='M120 75H360V150H120Z' fill='%23bccbdd'/%3E%3Cpath d='M150 85V140M210 85V140M270 85V140M330 85V140' stroke='white' stroke-width='20'/%3E%3Cpath d='M100 160H380' stroke='%23324c70' stroke-width='12'/%3E%3C/svg%3E" alt="Условное здание университета с колоннами; это иллюстрация, не фото кампуса" width="480" height="180">
+        <figcaption>Условная иллюстрация для знакомства с тегом img.</figcaption>
+      </figure>
+      <details>
+        <summary>Как подключить фото, звук и видео</summary>
+        <p>Эти примеры показаны как текст: сначала подготовьте собственные медиафайлы.</p>
+        <!-- pre сохраняет пробелы и переносы; code обозначает код.
+             &lt; и &gt; выводят угловые скобки, не создавая теги. -->
+        <pre><code>&lt;picture&gt;
+  &lt;source media="(min-width: 800px)" srcset="images/campus-wide.jpg"&gt;
+  &lt;img src="images/campus.jpg" alt="Главный вход в кампус" width="480"&gt;
+&lt;/picture&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="media/welcome.mp3" type="audio/mpeg"&gt;
+  Ваш браузер не поддерживает аудио.
+&lt;/audio&gt;
+
+&lt;video controls width="480" preload="metadata"&gt;
+  &lt;source src="media/campus.mp4" type="video/mp4"&gt;
+  &lt;track src="media/subtitles.vtt" kind="captions" srclang="ru" label="Русский" default&gt;
+  Ваш браузер не поддерживает видео.
+&lt;/video&gt;</code></pre>
+        <p><code>source</code> задаёт источник, <code>track</code> — дорожку субтитров.
+          Для доступности аудиозаписи добавьте рядом текстовую расшифровку.</p>
+      </details>
+      <h3>Встроенный документ</h3>
+      <!-- iframe — отдельная страница внутри страницы. srcdoc содержит её HTML.
+           sandbox ограничивает возможности встроенного документа. -->
+      <iframe title="Учебное объявление" sandbox srcdoc="<!DOCTYPE html><html lang='ru'><head><meta charset='UTF-8'><title>Объявление</title></head><body><h2>HTML-клуб</h2><p>Создаём первую страницу вместе!</p></body></html>" width="480" height="160"></iframe>
+    </section>
+
+    <section id="application">
+      <h2>Учебная анкета студента</h2>
+      <p>Заполняйте вымышленными данными. Анкета демонстрационная: отправка и сохранение не подключены.</p>
+      <!-- form — форма; label связывается с полем через for и id.
+           name — имя поля при отправке; required — обязательность.
+           Нет активной кнопки submit: данные никуда отправлять не нужно. -->
+      <form>
+        <fieldset>
+          <legend>Информация о студенте</legend>
+          <p>
+            <label for="student-name">Имя (обязательно):</label><br>
+            <input type="text" id="student-name" name="student_name" placeholder="Например, Асан" required minlength="2" maxlength="80">
+          </p>
+          <p>
+            <label for="email">Учебный email:</label><br>
+            <input type="email" id="email" name="email" placeholder="student@example.com">
+          </p>
+          <p>
+            <label for="phone">Телефон:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="Введите вымышленный номер">
+          </p>
+          <p>
+            <label for="birthday">Дата рождения:</label><br>
+            <input type="date" id="birthday" name="birthday">
+          </p>
+          <p>
+            <label for="course">Курс:</label>
+            <input type="number" id="course" name="course" min="1" max="6" value="1">
+          </p>
+          <p>
+            <label for="demo-password">Пример пароля (не используйте настоящий):</label><br>
+            <input type="password" id="demo-password" name="demo_password" minlength="8" autocomplete="new-password">
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Учебные интересы</legend>
+          <p>
+            <label for="direction">Направление:</label>
+            <select id="direction" name="direction">
+              <option value="">Выберите направление</option>
+              <optgroup label="Технические примеры">
+                <option value="web">Веб-разработка</option>
+                <option value="data">Анализ данных</option>
+              </optgroup>
+              <optgroup label="Экономические примеры">
+                <option value="finance">Финансы</option>
+              </optgroup>
+            </select>
+          </p>
+          <p>
+            <label for="language">Язык обучения (можно вписать свой):</label>
+            <input list="languages" id="language" name="language">
+            <datalist id="languages">
+              <option value="Кыргызский"></option>
+              <option value="Русский"></option>
+              <option value="Английский"></option>
+            </datalist>
+          </p>
+          <!-- Одинаковый name объединяет radio в группу с одним выбором. -->
+          <fieldset>
+            <legend>Формат учебного занятия</legend>
+            <label><input type="radio" name="format" value="offline" checked> В аудитории</label>
+            <label><input type="radio" name="format" value="online"> Онлайн</label>
+          </fieldset>
+          <p>Интересующие темы:</p>
+          <p>
+            <label><input type="checkbox" name="topics" value="html" checked> HTML</label>
+            <label><input type="checkbox" name="topics" value="design"> Дизайн</label>
+            <label><input type="checkbox" name="topics" value="analytics"> Аналитика</label>
+          </p>
+          <p>
+            <label for="confidence">Уверенность в HTML (от 0 до 10):</label>
+            <input type="range" id="confidence" name="confidence" min="0" max="10" value="3">
+          </p>
+          <p>
+            <label for="color">Любимый цвет:</label>
+            <input type="color" id="color" name="color" value="#234567">
+          </p>
+          <p>
+            <label for="portfolio">Ссылка на портфолио:</label>
+            <input type="url" id="portfolio" name="portfolio" placeholder="https://example.com">
+          </p>
+          <p>
+            <label for="attachment">Файл задания:</label>
+            <input type="file" id="attachment" name="attachment" accept=".html,.txt">
+          </p>
+          <p>
+            <label for="message">Что хотите изучить?</label><br>
+            <textarea id="message" name="message" rows="4" cols="40" placeholder="Напишите несколько предложений"></textarea>
+          </p>
+        </fieldset>
+        <p>
+          <button type="submit" disabled>Отправка не подключена</button>
+          <button type="reset">Сбросить анкету</button>
+        </p>
+        <!-- reset возвращает начальные значения, а не обязательно очищает всё.
+             Для реальной отправки нужны обработчик, action и подходящий method.
+             Загрузка файлов обычно требует method="post" и enctype="multipart/form-data". -->
+      </form>
+    </section>
+
+    <section id="laboratory">
+      <h2>Лаборатория дополнительных тегов</h2>
+      <h3>Текст и обозначения</h3>
+      <p>Формула воды: H<sub>2</sub>O. Площадь: 25 м<sup>2</sup>.</p>
+      <p>Изменение темы: <del>Оформление CSS</del> <ins>Основы HTML</ins>.</p>
+      <p><s>Регистрация на пример занятия открыта.</s> Это устаревшее утверждение в учебном макете.</p>
+      <p>Пример отмеченной ошибки: <u>унивирситет</u>. Тег u не превращает текст в ссылку.</p>
+      <p>Учебное событие: <time datetime="2026-10-15T14:00">15 октября 2026 года, 14:00</time>.</p>
+      <p>Название учебного проекта: <cite>Моя первая страница Ala-Too</cite>.</p>
+      <p>Нажмите <kbd>Ctrl</kbd> + <kbd>S</kbd>, чтобы сохранить файл.
+        Пример ответа программы: <samp>Файл сохранён</samp>.</p>
+      <p>Переменная: <var>x</var> + 2 = 5.</p>
+      <p>Код учебного курса: <data value="WEB-101">Введение в веб-разработку</data>.</p>
+      <p>Длинное слово с разрешёнными местами переноса: international<wbr>university<wbr>department.</p>
+      <p>Изоляция направления текста: <bdi lang="ar">علي</bdi> — участник учебной группы.</p>
+      <p>Принудительное направление справа налево: <bdo dir="rtl">Ala-Too</bdo>.</p>
+      <p>Подсказка произношения: <ruby lang="ja">学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>.</p>
+      <!-- div — универсальный блочный контейнер; span — строчный.
+           Без CSS у span обычно нет видимого эффекта. -->
+      <div>
+        <p>Группа: <span>SCA — учебный пример</span>.</p>
+      </div>
+      <h3>Прогресс и значения</h3>
+      <p><label for="progress">Пройдено разделов: 4 из 10.</label>
+        <progress id="progress" value="4" max="10">40%</progress></p>
+      <p><label for="score">Учебный результат: 75 из 100.</label>
+        <meter id="score" min="0" max="100" low="50" high="80" optimum="100" value="75">75 из 100</meter></p>
+      <p>Пример результата вычисления: <output name="example_result">2 + 3 = 5</output>.
+        Здесь значение записано вручную и автоматически не пересчитывается.</p>
+      <h3>Раскрывающийся блок</h3>
+      <details>
+        <summary>Чем отличаются тег и атрибут?</summary>
+        <p>В <code>&lt;a href="#top"&gt;Наверх&lt;/a&gt;</code>
+          <code>a</code> — имя тега, <code>href</code> — атрибут, <code>#top</code> — его значение.</p>
+      </details>
+      <details>
+        <summary>Какие элементы не имеют закрывающего тега?</summary>
+        <p>Например: <code>meta</code>, <code>img</code>, <code>input</code>,
+          <code>br</code>, <code>hr</code>, <code>source</code>, <code>track</code>, <code>wbr</code>.</p>
+      </details>
+      <!-- template хранит невидимый шаблон. Для вставки в страницу обычно нужен JS. -->
+      <template id="student-card">
+        <article>
+          <h3>Имя студента</h3>
+          <p>Описание студента.</p>
+        </article>
+      </template>
+      <p>В исходном коде этого раздела есть <code>template</code>: его содержимое не отображается.</p>
+      <p>Редкие специальные элементы вроде <code>canvas</code>, <code>object</code>,
+        <code>embed</code>, <code>map</code> и <code>area</code> здесь не демонстрируются.
+        Устаревшие <code>font</code>, <code>center</code> и <code>marquee</code> использовать не нужно.</p>
+    </section>
+
+    <section id="practice">
+      <h2>Задания для группы</h2>
+      <ol>
+        <li>Найдите head и body. Объясните разницу между ними.</li>
+        <li>Поменяйте title и h1. Где виден каждый из них?</li>
+        <li>Создайте раздел «Студенческие клубы» и ссылку на него в меню.</li>
+        <li>Добавьте клубы списком ul, а правила вступления — списком ol.</li>
+        <li>Добавьте строку в расписание. Скорректируйте итог в tfoot.</li>
+        <li>Замените иллюстрацию собственным фото и напишите подходящий alt.</li>
+        <li>Добавьте в анкету поле «Группа» с label, id и name.</li>
+        <li>Объясните разницу между radio и checkbox.</li>
+        <li>Создайте details с вопросом и ответом об HTML.</li>
+        <li>Пройдите по странице клавишей Tab. Проверьте ссылки и поля.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <h2>Контакты учебного проекта</h2>
+    <!-- address — контактные сведения автора или организации, а не любой адрес.
+         example.com используется для демонстрации, это не контакт университета. -->
+    <address>
+      Автор: учебная группа по веб-разработке.<br>
+      Пример email: <a href="mailto:student@example.com">student@example.com</a>.
+    </address>
+    <p><small>&copy; 2026. Учебный макет на тему Ala-Too. Все анкеты и расписание демонстрационные.</small></p>
+    <p><a href="#top">Вернуться наверх ↑</a></p>
+  </footer>
+</body>
+</html>
